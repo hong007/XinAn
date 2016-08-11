@@ -73,12 +73,11 @@
 				<p class="contact txtct">奖品兑换码：<span>oloi1h231x812dsasd</span></p>
 			</div>
 		</div>
-
-		<div class="bottom">
+	</div>
+	<div class="bottom">
 			<!-- <p class="txtct"><img class="merimg" src="image/merchantbg.png"></p>
 			<p class="infors txtct">上海嘉韦思信息技术有限公司</p> -->
 		</div>
-	</div>
 	<script type="text/javascript">
 		function nextPart(eve){
 			var curSect=eve.closest(".section");
@@ -86,19 +85,23 @@
 			if(curSect.index()>=1){
 				$(".bottom").hide();
 			}
-			// else{
-			// 	heightAuto();
-			// }
+			else{
+				heightAuto();
+			}
 		}
-		// function heightAuto(){
-		// 	var BtmHeight=Math.abs(document.body.clientHeight-$(".top").height()-$(".content").height());
-		// 	// alert(BtmHeight);
-		// 	if(BtmHeight<55){
-		// 		$(".container").height($(".container").height()+55)
-		// 	}
-		// 	$(".bottom").css('bottom',-BtmHeight);
-		// }
-		// heightAuto();
+		function heightAuto(){
+			var BtmHeight=Math.abs(document.body.clientHeight-$(".container").height());
+			// alert(BtmHeight);
+			if(BtmHeight<55){
+				// $(".container").height($(".top").height()+$(".content").height()+55)
+				$(".bottom").removeClass("active-height")
+				$(".bottom").css('margin-top',BtmHeight);
+			}else{
+				$(".bottom").css('margin-top',0);
+				$(".bottom").addClass("active-height")
+			}
+		}
+		heightAuto();
 	</script>
 </body>
 </html>
