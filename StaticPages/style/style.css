@@ -1,0 +1,243 @@
+/* 初始化代码 */
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    background: #303136;
+	color:#fff;
+	width: 100%;
+	height: 100%;
+}
+html{
+  font-size:62.5%;//*10 ÷ 16 × 100% = 62.5%*/
+}
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.4rem;
+}
+body, input, button, select, textarea {
+  font: 62.5%/1.5 "微软雅黑" ,"Microsoft Yahei", "Helvetica Neue",Helvetica, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  font-size: 1.4rem;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+img, a img {
+  border: 0
+}
+a {
+  color: #bcbcbc;
+  outline: medium none;
+  text-decoration: none;
+  font-size: 1.4rem;
+  star: expression(this.onFocus=this.blur())
+}
+a:hover {
+  text-decoration: none
+}
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+label {
+  cursor: pointer
+}
+ul li, .ol li {
+  list-style: none
+}
+em, cite, i {
+  font-style: normal
+}
+button{
+  background: none;
+  border:none;
+  outline: none;
+}
+button:focus{
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+    -webkit-appearance: none; /* 方法2 */
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+input::-ms-clear {
+  display: none;
+}
+textarea {
+  resize: none;
+}
+/* 通用样式 */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix{
+  zoom: 1;
+}
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.txtct{
+  text-align: center;
+}
+.txtlt{
+  text-align: left;
+}
+.txtrt{
+  text-align: right;
+}
+.container{
+	margin: 0;
+	padding: 0 10px;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.top{
+	padding-top: 8%;
+	width: 100%;
+}
+.top-logo img{
+	width: 50%;
+}
+.title{
+	padding: 7% 0 8%;
+	width: 270px;
+	margin: 0 auto;
+	font-weight: normal;
+	font-size: 2.0rem;
+}
+.content{
+	padding: 0 6px;
+}
+.section{
+	display: none;
+}
+.section-one{
+	display: block;
+}
+.tips{
+	padding: 15px 10px 18px;
+	background: #2a2c2e;
+	margin-bottom: 8.5%;
+	box-shadow: 0 7px 22px rgba(0, 0, 0,0.4);
+}
+.tips p{
+	text-indent: 2.5rem;
+	line-height: 20px;
+	font-size: 1.4rem;
+}
+.default-p{
+	height: 50px;
+}
+.default-btn{
+	display: inline-block;
+	height: 100%;
+	width: 50%;
+	color:#fff;
+	background: url(../image/btnbg.png) no-repeat center;
+	background-size: contain;
+}
+
+.bottom{
+	// position: absolute;
+	// left: 0;
+	// bottom: 0px;
+	// right: 0;
+	margin-top: 8%;
+	width: 100%;
+	height: 55px;
+	background: url(../image/btmbg.png) no-repeat center;
+	background-size: contain;
+}
+.section-two-item{
+	margin-bottom: 5%;
+}
+.section-two-item .default-p{
+	height: 40px;
+}
+.section-two-item .default-btn{
+	background: url(../image/btnbg02.png) no-repeat center;
+	background-size: contain;
+	width: 65%;
+	color: #2099d2;
+	font-size: 1.4rem;
+}
+.section-two-item .default-btn span{
+	color: #20dbb3;
+	margin-left: 10px;
+}
+.item-tips{
+	font-size: 1.2rem;
+	margin-top: 2px;
+}
+
+.section-three .title{
+	margin-top:-15%;
+	margin-bottom: -6%;
+}
+.section-three-item{
+	width: 270px;
+	margin:10px auto;
+}
+.qt{
+	font-size: 1.6rem;
+}
+.color1{
+	color:#eb0f0f;
+}
+.qt span{
+	display: inline-block;
+	min-width:30px; 
+}
+.activecolor{
+	color:#058ece;
+}
+.next-qt{
+	margin-top: 30%;
+}
+.result{
+	text-shadow:-1px 5px 12px #000;
+	font-size: 4.0rem;
+}
+ .score, .score span{
+	font-size: 2.6rem;
+	margin-top: -8px;
+}
+.color3{
+	color:#fc0;
+}
+.contact{
+	margin-top:70px;
+	color:#0381e3;
+}
+.contact span{
+	text-decoration: underline;
+}
