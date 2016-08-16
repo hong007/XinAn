@@ -64,7 +64,7 @@
                 <div class="swiper-container swiper-container-horizontal">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide-active">
-                            <div class="swiper-item" id="num1">
+                            <div class="swiper-item" id="num1" data-option="singlechoose">
                                 <div class="qt-block-title">
                                     <p class="qt color1 txtlt">
                                         <input class="qt-input" type="radio" name="num1">
@@ -106,10 +106,9 @@
                             </p>
                         </div>
                         <div class="swiper-slide swiper-slide-next">
-                            <div class="swiper-item" id="num2">
+                            <div class="swiper-item" id="num2" data-option="multichoose">
                                 <div class="qt-block">
                                     <p class="qt color1 txtlt">
-                                        <input class="qt-input qt-checkbox" type="checkbox" name="num2">
                                         <span>2、</span>
                                         “肉鸡”的正确解释？
                                     </p>
@@ -148,10 +147,9 @@
                             </p>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-item" id="num3">
+                            <div class="swiper-item" id="num3" data-option="singlechoose">
                                 <div class="qt-block-title">
                                     <p class="qt color1 txtlt">
-                                        <input class="qt-input" type="radio" name="num3">
                                         <span>3、</span>
                                         “肉鸡”的正确解释？
                                     </p>
@@ -190,10 +188,9 @@
                             </p>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-item" id="num4">
+                            <div class="swiper-item" id="num4" data-option="multichoose">
                                 <div class="qt-block">
                                     <p class="qt color1 txtlt">
-                                        <input class="qt-input qt-checkbox" type="checkbox" name="num4">
                                         <span>4、</span>
                                         “肉鸡”的正确解释？
                                     </p>
@@ -233,13 +230,12 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="section section-four">
                 <p class="result txtct color3">恭喜您！</p>
                 <p class="result score txtct color3">
                     获得
-                    <span>10</span>
+                    <span id="userScores">10</span>
                     分&nbsp;&nbsp;&nbsp;
                 </p>
                 <p class="contact txtct">
@@ -326,10 +322,55 @@
             }, 500);
         }
 
+        var answerList=[];
+        var answerSingl={
+            qust_num:'',
+            qust_type:'',
+            qust_value:''
+        }
         //下一题，触发滑动事件
         function nextQust(eve) {
-            var curPageId = eve.closest(".swiper-slide").index();
+            var curObj = eve.closest(".swiper-slide");
+            var totalNum=$(".swiper-item").length;
+            var curPageId = curObj.index();
+            answerSingle={};
+            answerSingle.qust_num = curObj.find(".swiper-item").attr("id");
+            answerSingle.qust_type = curObj.find(".swiper-item").attr("data-option");
+            var inputs = curObj.find("input:checked");
+            answerSingle.qust_value='';
+            for(var i = 0; i<inputs.length; i++){
+                if(i==inputs.length-1){
+                    answerSingle.qust_value += inputs.eq(i).next("span").text();
+                }else{
+                    answerSingle.qust_value += inputs.eq(i).next("span").text()+'&';
+                }
+            }
+            answerList.push(answerSingle);
+            console.log('answerList is ',answerList);
             mySwiper.slideTo(curPageId + 1, 300, false);
+
+            console.log(totalNum,curPageId)
+            if(curPageId==totalNum-1){
+                $.ajax({
+                url:'',
+                type:'post',
+                data:JSON.stringify(answerList),
+                success:function(result){
+                    if (curData.err == 0) {
+                       console.log('正确',result.msg);
+                       $("#qtContainer").hide();
+                       $(".section-four").show();
+                       $("#userScores").text(result.value);
+                          
+                    } else {
+                       alert('错误：' + result.msg);
+                    }
+                },
+                error:function(result){
+                    alert('错误：' + result.msg);
+                    }
+                })
+            }
         }
 
         // 高度自适应不同不同屏幕
