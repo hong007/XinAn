@@ -253,33 +253,38 @@
     </div>
     <script type="text/javascript">
         var swiper = null;
+        var answerList = [];
+        var answerSingl = {
+            qust_num: '',
+            qust_type: '',
+            qust_value: ''
+        }
         $(function () {
             // 页面初始化
             // $.ajax({
-            // 	url:'',
-            // 	type:'get',
-            // 	data:{
+            //     url: '',
+            //     type: 'get',
+            //     data: {
 
-            // 	},
-            // 	success:function(result){
-            // 		var curData = JSON.parse(result);
-            //            if (curData.err == 0) {
-            //                // console.log('正确',curData);
-            //                console.log('正确', curData.length);
-            //                   $.each(curData, function(n, value) {
-            //                       console.log('value', value);
-            //                       var  html='<div class="swiper-item" id="'+value.id+'"><div class="qt-block"><p class="qt color1 txtlt"><span>1、</span>“肉鸡”的正确解释？</p></div><div class="qt-block"><p class="qt txtlt"><span>A</span>比较慢的电脑</p></div><div class="qt-block"><p class="qt activecolor txtlt"><span>B</span>被黑客控制的电脑</p></div><div class="qt-block"><p class="qt txtlt"><span>C</span>肉食鸡</p></div><div class="qt-block"><p class="qt txtlt"><span>D</span>烤鸡</p></div></div>';
-            //                       $("#qtContainer").append(html);
-            //                   });
-            //            } else {
-            //                alert('错误：' + result.msg);
-            //            }
-            // 	},
-            // 	error:function(result){
-            //              alert('错误：' + result.msg);
-            // 	}
-            // })
-
+            //     },
+            //     success: function (result) {
+            //         var curData = JSON.parse(result);
+            //         if (curData.err == 0) {
+            //             // console.log('正确',curData);
+            //             console.log('正确', curData.length);
+            //             $.each(curData, function (n, value) {
+            //                 console.log('value', value);
+            //                 var html = '<div class="swiper-slide"><div class="swiper-item" id="' + value.id + '" data-option="' + value.type + '"><div class="qt-block-title"><p class="qt color1 txtlt"><span>' + value.num + '、</span>“肉鸡”的正确解释？</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>A</span>' + value.value1 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>B</span>' + value.value2 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>C</span>' + value.value3 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>D</span>' + value.value4 + '</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>';
+            //                 $("#qtContainer").append(html);
+            //             });
+            //         } else {
+            //             alert('错误：' + result.msg);
+            //         }
+            //     },
+            //     error: function (result) {
+            //         alert('错误：' + result.msg);
+            //     }
+            // });
 
             $(".qt-block").click(function () {
                 $(this).find("input").prop("checked", true);
@@ -291,9 +296,6 @@
                 }
             })
         });
-        // function pageInit(){
-
-        // }
         function nextPart(eve) {
             var curSect = eve.closest(".section");
             // curSect.hide().next().show();
@@ -322,54 +324,57 @@
             }, 500);
         }
 
-        var answerList=[];
-        var answerSingl={
-            qust_num:'',
-            qust_type:'',
-            qust_value:''
-        }
+
         //下一题，触发滑动事件
         function nextQust(eve) {
             var curObj = eve.closest(".swiper-slide");
-            var totalNum=$(".swiper-item").length;
+            var totalNum = $(".swiper-item").length;
             var curPageId = curObj.index();
-            answerSingle={};
+            answerSingle = {};
             answerSingle.qust_num = curObj.find(".swiper-item").attr("id");
             answerSingle.qust_type = curObj.find(".swiper-item").attr("data-option");
             var inputs = curObj.find("input:checked");
-            answerSingle.qust_value='';
-            for(var i = 0; i<inputs.length; i++){
-                if(i==inputs.length-1){
+            answerSingle.qust_value = '';
+            for (var i = 0; i < inputs.length; i++) {
+                if (i == inputs.length - 1) {
                     answerSingle.qust_value += inputs.eq(i).next("span").text();
-                }else{
-                    answerSingle.qust_value += inputs.eq(i).next("span").text()+'&';
+                } else {
+                    answerSingle.qust_value += inputs.eq(i).next("span").text() + '&';
                 }
             }
             answerList.push(answerSingle);
-            console.log('answerList is ',answerList);
+            console.log('answerList is ', answerList);
             mySwiper.slideTo(curPageId + 1, 300, false);
 
-            console.log(totalNum,curPageId)
-            if(curPageId==totalNum-1){
+            console.log(totalNum, curPageId);
+            if (curPageId == totalNum - 1) {
                 $.ajax({
-                url:'',
-                type:'post',
-                data:JSON.stringify(answerList),
-                success:function(result){
-                    if (curData.err == 0) {
-                       console.log('正确',result.msg);
-                       $("#qtContainer").hide();
-                       $(".section-four").show();
-                       $("#userScores").text(result.value);
-                          
-                    } else {
-                       alert('错误：' + result.msg);
-                    }
-                },
-                error:function(result){
-                    alert('错误：' + result.msg);
+                    url: '',
+                    type: 'post',
+                    data: JSON.stringify(answerList),
+                    success: function (result) {
+                        if (curData.err == 0) {
+                            console.log('正确', result.msg);
+                            $("#qtContainer").hide();
+                            $(".section-four").show();
+                            $("#userScores").text(result.value);
+
+                        } else {
+                            alert('错误：' + result.msg);
+                        }
+                    },
+                    error: function (result) {
+                        alert('错误：' + result.msg);
                     }
                 })
+            }
+        }
+
+        function checkAnswer(curvalue) {
+            for (var i = 0; i < answerList.length - 1; i++) {
+                if (answerList[i].qust_num == curvalue.qust_num) {
+                    answerList.splice(i, 1, curvalue);
+                }
             }
         }
 
