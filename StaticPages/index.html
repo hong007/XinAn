@@ -232,16 +232,23 @@
                 </div>
             </div>
             <div class="section section-four">
-                <p class="result txtct color3">恭喜您！</p>
-                <p class="result score txtct color3">
-                    获得
-                    <span id="userScores">10</span>
-                    分&nbsp;&nbsp;&nbsp;
-                </p>
-                <p class="contact txtct">
-                    奖品兑换码：
-                    <span>oloi1h231x812dsasd</span>
-                </p>
+                <div class="successblock">
+                	<p class="result txtct color3">恭喜您！</p>
+                	<p class="result score txtct color3">
+                	    获得
+                	    <span id="userScores">10</span>
+                	    分&nbsp;&nbsp;&nbsp;
+                	</p>
+                	<p class="contact txtct">
+                	    奖品兑换码：
+                	    <span>oloi1h231x812dsasd</span>
+                	</p>
+                	
+                	<p class="result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
+                </div>
+            <div class="failbock"><p class="result fail-title txtct">&nbsp;很遗憾！</p>
+            <p class="result fail-infor txtct">您未能获得奖品</p>
+             <p class="fail-encour txtct">请您再接再厉</p>
             </div>
         </div>
     </div>
@@ -358,6 +365,13 @@
                             $("#qtContainer").hide();
                             $(".section-four").show();
                             $("#userScores").text(result.value);
+                            if(score<90){
+                            	$(".successblock").hide();
+                            	$(".failblock").show();
+                            }else{
+                            	$(".successblock").show();
+                            	$(".failblock").hide();
+                            }
 
                         } else {
                             alert('错误：' + result.msg);
