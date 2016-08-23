@@ -128,11 +128,14 @@ textarea {
 	width: 50%;
 }
 .title{
-	padding: 7% 0 8%;
+	padding: 7% 0 5%;
 	width: 270px;
 	margin: 0 auto;
 	font-weight: normal;
 	font-size: 2.0rem;
+}
+.top .title{
+	visibility: hidden;
 }
 .content{
 	padding: 0 6px;
@@ -181,6 +184,9 @@ textarea {
 	left: 0;
 	bottom: 0px;
 	right: 0;
+}
+.section-two{
+	padding-top: 10%;
 }
 .section-two-item{
 	margin-bottom: 5%;
