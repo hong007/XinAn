@@ -282,13 +282,15 @@ textarea {
 	background: url(../image/newbtnbg.png) no-repeat center;
 	background-size: 100%;
 	width: 65%;
-	color: #2099d2;
+	// color: #2099d2;
+	color: #fff;
 	font-size: 1.4rem;
+	text-shadow:2px 2px 9px rgba(255, 255, 255, 1)
 }
-.section-two-item .default-btn span{
-	color: #20dbb3;
-	margin-left: 10px;
-}
+// .section-two-item .default-btn span{
+// 	color: #20dbb3;
+// 	margin-left: 10px;
+// }
 .item-tips{
 	font-size: 1.2rem;
 	margin-top: 2px;
@@ -303,6 +305,9 @@ textarea {
 .qt-block-title,.qt-block{
 	width: 270px;
 	margin:10px auto;
+}
+.swiper-item .qt-block:first-child .qt{
+	padding-left: 25px;
 }
 .qt{
 	font-size: 1.6rem;
