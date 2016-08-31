@@ -333,20 +333,26 @@
                                 </div>
                                 <div class="section section-four">
                                     <div class="successblock">
-                                        <p class="result txtct">恭喜您！</p>
-                                        <p class="result score txtct">
+                                        <p class="no-exchange  result txtct">恭喜您！</p>
+                                        <p class="no-exchange  result score txtct">
                                             获得
                                             <span id="userScores">10</span>
                                             分&nbsp;&nbsp;&nbsp;
                                         </p>
-                                        <p class="result-qt result txtct">欢迎继续参与答题</p>
-                                        <p class="contact txtct cr1">
+                                        <p class="exchanged result txtct">恭喜您本次答题获得<span id="lastScore"></span>分</p>
+                                        <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p>
+                                        <p class="no-exchange contact txtct cr1">
                                             奖品兑换码：
                                             <span id="rewardCode">code</span>
                                         </p>
-                                        <p class="result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
+                                        <p class="no-exchange result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
                                     </div>
                                     <div class="failblock">
+                                     <p class="result score txtct">
+                                            获得
+                                            <span id="userFailScores">10</span>
+                                            分&nbsp;&nbsp;&nbsp;
+                                        </p>
                                         <p class="result fail-title txtct">&nbsp;很遗憾！</p>
                                         <p class="result fail-infor txtct">您未能获得奖品</p>
                                         <p class="fail-encour txtct cr1">请您再接再厉</p>
@@ -436,11 +442,17 @@
             if (score < 9 - glvl) {
                 $(".successblock").hide();
                 $(".failblock").show();
+                $("#userFailScores").text(score);
             }
             else {
                 $("#rewardCode").text(code);
                 $(".successblock").show();
                 $(".failblock").hide();
+                if(exchange==1){
+                    $("#continueQt").show();
+                    $(".no-exchange").hide();
+                    $("#lastScore").text(score);
+                }
             }
         }
         $(function () {

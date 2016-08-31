@@ -221,6 +221,9 @@ textarea {
 	display: block;
 	padding-top: 0%;
 }
+.section-four{
+	min-height: 260px;
+}
 .active{
 	display: block;
 }
@@ -342,9 +345,11 @@ textarea {
 }
 .result-qt{
 color:#fff;
-font-size: 1.2em;
-display: none;
+font-size: 1.4em;
 margin-top: 15%;
+}
+.exchanged{
+display: none;
 }
 .color3{
 	// color:#fc0;
