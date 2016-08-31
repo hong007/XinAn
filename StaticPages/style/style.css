@@ -214,14 +214,18 @@ textarea {
 	padding: 0 6px;
 }
 .section{
-	display: none;
+	// display: none;
 	padding-top: 20%;
 }
 .section-one{
 	display: block;
 	padding-top: 0%;
 }
+.section-three{
+	opacity: 0;
+}
 .section-four{
+	display: none;
 	min-height: 260px;
 }
 .active{
