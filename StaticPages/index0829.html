@@ -333,14 +333,17 @@
                                 </div>
                                 <div class="section section-four">
                                     <div class="successblock">
-                                        <p class="no-exchange  result txtct">恭喜您！</p>
-                                        <p class="no-exchange  result score txtct">
+                                        <p class="no-exchange result txtct">恭喜您！</p>
+                                        <p class="no-exchange result score txtct">
                                             获得
                                             <span id="userScores">10</span>
                                             分&nbsp;&nbsp;&nbsp;
                                         </p>
-                                        <p class="exchanged result txtct">恭喜您本次答题获得<span id="lastScore"></span>分</p>
+                                        
+                                        <p class="exchanged result txtct">恭喜您本次</p>
+                                        <p class="exchanged result result-score txtct">答题获得<span id="lastScore"></span>分</p>
                                         <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p>
+
                                         <p class="no-exchange contact txtct cr1">
                                             奖品兑换码：
                                             <span id="rewardCode">code</span>
@@ -466,17 +469,17 @@
                 $(".section-one").hide();
                 show_result(tmp[1], tmp1[1]);
 
-                $(".swiper-slide").hide();
-                $(".swiper-slide").eq(2).show();
-                $(".section").hide();
-                $(".section").eq(2).show();
+                // $(".swiper-slide").hide();
+                // $(".swiper-slide").eq(2).show();
+                // $(".section").hide();
+                // $(".section").eq(2).show();
 
-                $(".xinanqt").hide();
-                $(".failblock").hide();
-                $(".no-exchange").hide();
-                $(".page-item-bottom").hide();
+                // $(".xinanqt").hide();
+                // $(".failblock").hide();
+                // $(".no-exchange").hide();
+                // $(".page-item-bottom").hide();
 
-                $(".exchanged").show();
+                // $(".exchanged").show();
 
             }
 

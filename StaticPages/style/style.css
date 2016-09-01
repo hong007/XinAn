@@ -136,7 +136,7 @@ textarea {
 	background-size: 100% 100%;
 	position: relative;
 }
-.pagetwo .page-item-content{
+.pagetwo .page-item-content,.pagethree .page-item-content{
 	overflow: auto;
 }
 .rule-title{
@@ -316,6 +316,9 @@ textarea {
 	width: 270px;
 	margin:10px auto;
 }
+.swiper-item{
+	// overflow: auto;
+}
 .swiper-item .qt-block:first-child .qt{
 	padding-left: 25px;
 }
@@ -340,11 +343,17 @@ textarea {
 }
 .result{
 	text-shadow:-1px 5px 12px #000;
-	font-size: 4.0rem;
+	font-size: 5.0rem;
 	color: #ed1f7d;
 }
+.result-score{
+	font-size: 4.0rem;
+}
+.result-score span{
+	font-size: 4.0rem;
+}
  .score, .score span{
-	font-size: 2.6rem;
+	font-size: 4.0rem;
 	margin-top: -8px;
 }
 .result-qt{
@@ -362,8 +371,10 @@ display: none;
 .contact{
 	margin-top:70px;
 	color:#0381e3;
+	font-size: 2.2rem;
 }
 .contact span{
+	font-size: 2.2rem;
 	text-decoration: underline;
 }
 .scoretips{
