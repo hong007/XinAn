@@ -339,13 +339,13 @@
                                             <span id="userScores"></span>
                                             分&nbsp;&nbsp;&nbsp;
                                         </p>
-					<p class="exchanged result txtct">恭喜您本次</p >
+					                   <p class="exchanged result txtct">恭喜您本次</p >
                                         <p class="exchanged result result-score txtct">答题获得<span id="lastScore"></span>分</p >
                                         <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p >
 
                                         <p class="no-exchange contact txtct cr1" id="rewardCode2">
                                             奖品兑换码：
-                                            <span id="rewardCode">code</span>
+                                            <span class="rewardcode-span" id="rewardCode">code</span>
                                         </p>
                                         <p class="no-exchange result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
                                     </div>
@@ -452,7 +452,7 @@
                 $(".bottom-color").show();
                 $(".failblock").hide();
                 if (exchange == 0) {
-                    $("#rewardCode").text(code);
+                    $("#rewardCode").text(code).css("font-size","24px");
                 }else{
                     $("#continueQt").show();
                     $(".no-exchange").hide();
