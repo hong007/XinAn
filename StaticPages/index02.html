@@ -1,304 +1,514 @@
-<html><head>
-	<title>信安</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="js/Swiper/css/swiper.min.css">
-	<script src="js/jquery.min.js"></script>
-	<!-- <script src="js/Swiper/swiper.min.js"></script>
--->
-<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
-.en-markup-crop-options {
-    top: 18px !important;
-    left: 50% !important;
-    margin-left: -100px !important;
-    width: 200px !important;
-    border: 2px rgba(255,255,255,.38) solid !important;
-    border-radius: 4px !important;
-}
+<html>
 
-.en-markup-crop-options div div:first-of-type {
-    margin-left: 0px !important;
-}
-</style><script type="text/javascript" src="js/Swiper/swiper.min.js"></script></head>
+<head>
+    <title>信安</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="js/Swiper/css/swiper.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- <script src="js/Swiper/swiper.min.js"></script>
+    -->
+    <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+    
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+    
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+</head>
+
 <body>
-<div class="container">
-	<div class="top">
-		<p class="top-logo txtct">
-			<img src="image/logo01.png"></p>
-		<h2 class="title txtlt">信安在线资讯——有奖大问答</h2>
-	</div>
-	<div class="content">
-		<div class="section section-one" style="display: none;">
-			<div class="tips">
-				<p>
-					社会生活对网络的依赖程度越来越高，网络安全对现实社会的影响也日益凸显。为深入贯彻实国家信息化发展战略纲要和国家安全技术保卫条例，全面普及信息安全基础知识、开发安全和运维安全等，提高广大市民的信息安全保密意识和能力，提升网络安全和应用技能，维护国家安全、企业安全和个人安全与利益，信安在线推出“增强网络安全意识 普及网络安全知识”网上知识竞答活动，通过该活动向全社会宣传网络安全理念，使网络安全文化覆盖到网络的每一个角落，同时测试自己的网络安全知识水平、提高网络安全应用技能。期待您的参与，精美大奖等你来拿！
-				</p>
-			</div>
-
-			<p class="default-p txtct">
-				<button class="default-btn txtct" type="button" id="beginAnw" onclick="nextPart($(this))">开始答题</button>
-			</p>
-		</div>
-		<div class="section section-two active" style="display: none;">
-			<div class="section-two-item">
-				<p class="default-p txtct">
-					<button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
-						入
-						<span>门</span>
-					<p></p>
-				</button>
-
-				</p><p class="item-tips txtct">（普通大众可以掌握和理解的知识）</p>
-			</div>
-			<div class="section-two-item">
-				<p class="default-p txtct">
-					<button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
-						基
-						<span>础</span>
-					</button>
-				</p>
-				<p class="item-tips txtct">（IT行业从业人员应了解的知识）</p>
-			</div>
-			<div class="section-two-item">
-				<p class="default-p txtct">
-					<button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
-						专
-						<span>业</span>
-					</button>
-				</p>
-				<p class="item-tips txtct">（安全行业专业人员掌握的知识）</p>
-			</div>
-		</div>
-		<div class="section section-three active" id="qtContainer">
-			<h2 class="title txtlt">选择题</h2>
-			<div class="swiper-container swiper-container-horizontal">
-				<div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-343px, 0px, 0px);"><div class="swiper-slide swiper-slide-prev" style="width: 343px;"><div class="swiper-item" id="2" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="2"><span>1、</span>网页病毒主要通过以下途径传播</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="2"><span>A、</span>邮件</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="2"><span>B、</span>文件交换</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="2"><span>C、</span>网页浏览</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="2"><span>D、</span>光盘</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide swiper-slide-active" style="width: 343px;"><div class="swiper-item" id="3" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="3"><span>2、</span>浏览器存在的安全风险主要包含(   )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>A、</span>网络钓鱼、隐私跟踪</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>B、</span>网络钓鱼 、隐私跟踪 、数据劫持</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>C、</span>隐私跟踪、数据劫持、浏览器的安全漏洞</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>D、</span>网络钓鱼、隐私跟踪、数据劫持、浏览器的安全漏洞</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide swiper-slide-next" style="width: 343px;"><div class="swiper-item" id="4" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="4"><span>3、</span>为了防止邮箱邮件爆满而无法正常使用邮箱，您认为应该怎么做( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>A、</span>看完的邮件就立即删除</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>B、</span>定期删除邮箱的邮件</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>C、</span>定期备份邮件并删除</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>D、</span>发送附件时压缩附件</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="3" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="3"><span>4、</span>浏览器存在的安全风险主要包含(   )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>A、</span>网络钓鱼、隐私跟踪</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>B、</span>网络钓鱼 、隐私跟踪 、数据劫持</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>C、</span>隐私跟踪、数据劫持、浏览器的安全漏洞</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="3"><span>D、</span>网络钓鱼、隐私跟踪、数据劫持、浏览器的安全漏洞</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="6" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="6"><span>5、</span>以下说法错误的是( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="6"><span>A、</span>需要定期更新QQ软件</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="6"><span>B、</span>可以使用非官方提供的QQ软件</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="6"><span>C、</span>不在合作网站轻易输入QQ号</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="6"><span>D、</span>完善保密资料，使用密保工具</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="4" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="4"><span>6、</span>为了防止邮箱邮件爆满而无法正常使用邮箱，您认为应该怎么做( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>A、</span>看完的邮件就立即删除</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>B、</span>定期删除邮箱的邮件</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>C、</span>定期备份邮件并删除</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="4"><span>D、</span>发送附件时压缩附件</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="8" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="8"><span>7、</span>多久更换一次计算机的密码较为安全( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="8"><span>A、</span>一个月或一个月以内</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="8"><span>B、</span>1——3个月</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="8"><span>C、</span>3——6个月</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="8"><span>D、</span>半年以上或从不更换</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="9" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="9"><span>8、</span>以下哪种口令不属于弱口令( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="9"><span>A、</span>1.2345678E7</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="9"><span>B、</span>abcdefg </p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="9"><span>C、</span>AAAAAAA</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="9"><span>D、</span>qw！bydp00dwz1.</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="10" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="10"><span>9、</span>以下哪个说法是错误的( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="10"><span>A、</span>随身携带员工卡</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="10"><span>B、</span>不将员工卡借予其它人</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="10"><span>C、</span>身份证复印件使用后要销毁</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="10"><span>D、</span>购买指纹膜，特殊原因时由同事协助打卡</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-<div class="swiper-slide" style="width: 343px;"><div class="swiper-item" id="11" data-option="singlechoose"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="11"><span>10、</span>以下哪项是只有你具有的生物特征信息( )</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="11"><span>A、</span>指纹、掌纹、手型</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="11"><span>B、</span>指纹、掌纹、虹膜、视网膜</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="11"><span>C、</span>指纹、手型、脸型、声音、签名</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="11"><span>D、</span>指纹、掌纹、手型、虹膜、视网膜、脸型、声音、签名</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>
-</div>
-			</div>
-		</div>
-		<div class="section section-four">
-			<div class="successblock">
-				<p class="result txtct color3">恭喜您！</p>
-				<p class="result score txtct color3">
-					获得
-					<span id="userScores">10</span>
-					分&nbsp;&nbsp;&nbsp;
-				</p>
-				<p class="contact txtct">
-					奖品兑换码：
-					<span>oloi1h231x812dsasd</span>
-				</p>
-
-				<p class="result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
-			</div>
-			<div class="failbock">
-				<p class="result fail-title txtct">&nbsp;很遗憾！</p>
-				<p class="result fail-infor txtct">您未能获得奖品</p>
-				<p class="fail-encour txtct">请您再接再厉</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="bottom active-height" style="margin-top: 0px; display: none;">
-	<!-- <p class="txtct">
-	<img class="merimg" src="image/merchantbg.png"></p>
-<p class="infors txtct">上海嘉韦思信息技术有限公司</p>
--->
-</div>
-<script type="text/javascript">
-        var swiper = null;
-        var answerList = [];
-        var answerSingl = {
-            qust_num: '',
-            qust_type: '',
-            qust_value: ''
-        }
-        $(function () {
-            // 页面初始化
-            // $.ajax({
-            //     url: '',
-            //     type: 'get',
-            //     data: {
-
-            //     },
-            //     success: function (result) {
-            //         var curData = JSON.parse(result);
-            //         if (curData.err == 0) {
-            //             // console.log('正确',curData);
-            //             console.log('正确', curData.length);
-            //             $.each(curData, function (n, value) {
-            //                 console.log('value', value);
-            //                 var html = '<div class="swiper-slide"><div class="swiper-item" id="' + value.id + '" data-option="' + value.type + '"><div class="qt-block-title"><p class="qt color1 txtlt"><span>' + value.num + '、</span>“肉鸡”的正确解释？</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>A</span>' + value.value1 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>B</span>' + value.value2 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>C</span>' + value.value3 + '</p></div><div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + value.id + '"><span>D</span>' + value.value4 + '</p></div></div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>';
-            //                 $("#qtContainer").append(html);
-            //             });
-            //         } else {
-            //             alert('错误：' + result.msg);
-            //         }
-            //     },
-            //     error: function (result) {
-            //         alert('错误：' + result.msg);
-            //     }
-            // });
-
-            $(".qt-block").click(function () {
-                $(this).find("input").prop("checked", true);
-                if ($(this).find("input").hasClass("qt-checkbox")) {
-                    $(this).toggleClass("activecolor")
-                } else {
-                    $(this).addClass("activecolor");
-                    $(this).siblings(".qt-block").removeClass("activecolor");
-                }
-            })
+    <div class="swiper-container swiper-container-horizontal main-swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+                <div class="page-item pageone"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-next">
+                <div class="page-item pagetwo">
+                    <div class="page-item-content">
+                        <ul class="rules-menu">
+                            <li class="rules-menu-item">
+                                <h2 class="rule-title cr1">活动规则</h2>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    通过扫描“信安在线服务”二维码进入公众号中，
+                                    点击“有奖答题”模块，进行在线答题；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">题目难度分为“入门”、“基础”、“专业”；</span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    “入门”题目达到9分及以上分数时，获得兑奖码，
+                                    凭兑奖码进行兑奖；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    “基础”题目达到8分及以上分数时，获得兑奖码，
+                                    凭兑奖码进行兑奖；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    “专业”题目达到7分及以上分数时，获得兑奖码，
+                                    凭兑奖码进行兑奖；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item cr1">
+                                <span class="square"></span>
+                                <span class="item-span">一个微信账号只可兑奖一次，但答题难度和次数不限；</span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    无论何种题目，只要获得兑奖分数，即可在公账号首
+                                    页的“兑奖码”模块中显示兑奖页面；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
+                                    兑奖者将该活动转发朋友圈后，根据获得的“兑奖码”
+                                    找现场工作人员进行奖品兑换，一码一奖，兑过无效；
+                                </span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">活动最终解释权归属于信安在线。</span>
+                            </li>
+                        </ul>
+                        <div class="page-item-bottom" style="position: inherit;left:0;right: 0;bottom:0;">
+                            <p class="logo-area txtct">
+                                <img src="image/logo02.png">
+                            </p>
+                            <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
+                            <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-item pagethree">
+                    <div class="page-item-content">
+                        <div class="container">
+                            <div class="top">
+                                <p class="top-logo txtct">
+                                    <img src="image/logo01.png">
+                                </p>
+                                <p class="xinanqt txtct">
+                                    <img src="image/xinanqt.png">
+                                </p>
+                            </div>
+                            <div class="content">
+                                <div class="section section-two" style="display: block;">
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
+                                                入
+                                                <span>门</span>
+                                                <p></p>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（普通大众可以掌握和理解的知识）</p>
+                                    </div>
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 1)">
+                                                基
+                                                <span>础</span>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（IT行业从业人员应了解的知识）</p>
+                                    </div>
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 2)">
+                                                专
+                                                <span>业</span>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（安全行业专业人员掌握的知识）</p>
+                                    </div>
+                                </div>
+                                <div class="section section-three" id="qtContainer">
+                                    <div class="swiper-container swiper-container-horizontal qt-swiper-container">
+                                        <div class="swiper-wrapper qt-swiper-wrapper">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section section-four">
+                                    <div class="successblock">
+                                        <!-- 未兑换 -->
+                                        <p class="no-exchange result txtct">恭喜您！</p>
+                                        <p class="no-exchange result score txtct">
+                                            获得
+                                            <span id="userScores">10</span> 分&nbsp;&nbsp;&nbsp;
+                                        </p>
+                                        <p class="no-exchange  default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                        <p class="no-exchange contact txtct cr1">
+                                            奖品兑换码：
+                                            <span id="rewardCode">code</span>
+                                        </p>
+                                        <p class="no-exchange result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
+                                        <!-- 已兑换 -->
+                                        <p class="exchanged result txtct">恭喜您本次</p>
+                                        <p class="exchanged result result-score txtct">答题获得<span id="lastScore"></span>分</p>
+                                        <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p>
+                                        <p class="exchanged default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                    </div>
+                                    <div class="failblock">
+                                        <p class="result score txtct">
+                                            获得
+                                            <span id="userFailScores">10</span> 分&nbsp;&nbsp;&nbsp;
+                                        </p>
+                                        <p class="result fail-title txtct">&nbsp;很遗憾！</p>
+                                        <p class="result fail-infor txtct">您未能获得奖品</p>
+                                        <p class="fail-encour txtct cr1">请您再接再厉</p>
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                    </div>
+                                    <div class="bottom-color" style="bottom:-110%;height:68%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-item-bottom">
+                            <p class="logo-area txtct">
+                                <img src="image/logo02.png">
+                            </p>
+                            <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
+                            <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var openid = '123';
+    wx.config({
+        debug: false,
+        appId: 'wx48b2010286366dbb',
+        timestamp: 1472474269,
+        nonceStr: 'ggpadl26rfku31vtd6xl6ewtv5k7r0cl',
+        signature: 'bb38a215f3ecbf51ba7e75b5d4f90b43d219a52c',
+        jsApiList: [
+            'onMenuShareTimeline'
+        ]
+    });
+    var nb = ["牛逼大了", "完败", "漂亮", "偶像", "就是这么牛逼", "不服来战", "come on", "想怎样"];
+    var dex = Math.floor(Math.random() * nb.length);
+    wx.ready(function() {
+        wx.onMenuShareTimeline({
+            title: '击败了全国' + (Math.random() * 5 + 95).toFixed(1) + '%的人,' + nb[dex] + '!',
+            link: 'http://quiz.cnmstl.net/api/wxlogin',
+            imgUrl: 'http://quiz.cnmstl.net/image/logo.png',
+            success: function() {},
+            cancel: function() {}
         });
-        
-        function nextPart(eve, lvl) {
-			if (lvl !== undefined)
-			{
-				var all_question = eval('(' + "[[{\"type\":\"singlechoose\",\"list\":[\"邮件\",\"文件交换\",\"网页浏览\",\"光盘\"],\"title\":\"网页病毒主要通过以下途径传播\",\"id\":\"2\"},{\"type\":\"singlechoose\",\"list\":[\"网络钓鱼、隐私跟踪\",\"网络钓鱼 、隐私跟踪 、数据劫持\",\"隐私跟踪、数据劫持、浏览器的安全漏洞\",\"网络钓鱼、隐私跟踪、数据劫持、浏览器的安全漏洞\"],\"title\":\"浏览器存在的安全风险主要包含(   )\",\"id\":\"3\"},{\"type\":\"singlechoose\",\"list\":[\"看完的邮件就立即删除\",\"定期删除邮箱的邮件\",\"定期备份邮件并删除\",\"发送附件时压缩附件\"],\"title\":\"为了防止邮箱邮件爆满而无法正常使用邮箱，您认为应该怎么做( )\",\"id\":\"4\"},{\"type\":\"singlechoose\",\"list\":[\"网络钓鱼、隐私跟踪\",\"网络钓鱼 、隐私跟踪 、数据劫持\",\"隐私跟踪、数据劫持、浏览器的安全漏洞\",\"网络钓鱼、隐私跟踪、数据劫持、浏览器的安全漏洞\"],\"title\":\"浏览器存在的安全风险主要包含(   )\",\"id\":\"3\"},{\"type\":\"singlechoose\",\"list\":[\"需要定期更新QQ软件\",\"可以使用非官方提供的QQ软件\",\"不在合作网站轻易输入QQ号\",\"完善保密资料，使用密保工具\"],\"title\":\"以下说法错误的是( )\",\"id\":\"6\"},{\"type\":\"singlechoose\",\"list\":[\"看完的邮件就立即删除\",\"定期删除邮箱的邮件\",\"定期备份邮件并删除\",\"发送附件时压缩附件\"],\"title\":\"为了防止邮箱邮件爆满而无法正常使用邮箱，您认为应该怎么做( )\",\"id\":\"4\"},{\"type\":\"singlechoose\",\"list\":[\"一个月或一个月以内\",\"1——3个月\",\"3——6个月\",\"半年以上或从不更换\"],\"title\":\"多久更换一次计算机的密码较为安全( )\",\"id\":\"8\"},{\"type\":\"singlechoose\",\"list\":[\"1.2345678E7\",\"abcdefg \",\"AAAAAAA\",\"qw！bydp00dwz1.\"],\"title\":\"以下哪种口令不属于弱口令( )\",\"id\":\"9\"},{\"type\":\"singlechoose\",\"list\":[\"随身携带员工卡\",\"不将员工卡借予其它人\",\"身份证复印件使用后要销毁\",\"购买指纹膜，特殊原因时由同事协助打卡\"],\"title\":\"以下哪个说法是错误的( )\",\"id\":\"10\"},{\"type\":\"singlechoose\",\"list\":[\"指纹、掌纹、手型\",\"指纹、掌纹、虹膜、视网膜\",\"指纹、手型、脸型、声音、签名\",\"指纹、掌纹、手型、虹膜、视网膜、脸型、声音、签名\"],\"title\":\"以下哪项是只有你具有的生物特征信息( )\",\"id\":\"11\"}],[{\"type\":\"singlechoose\",\"list\":[\"管理要求中要采集分析的系统日志数量巨大，缺少专业工具难以执行分析工作\",\"管理员本身工作繁忙且人员配置不足，安全管理要求中的全部工作实现到位不现实\",\"信息安全告警事件误报太多无法全部进行有效分析判断\",\"全选\"],\"title\":\"为什么很多信息安全管理标准难以得到100的执行（）\",\"id\":\"52\"},{\"type\":\"singlechoose\",\"list\":[\"MD9 \",\"SALT \",\"MD5\",\"SAM\"],\"title\":\"下列哪种算法为当今主流加密算法（）\",\"id\":\"53\"},{\"type\":\"singlechoose\",\"list\":[\"入侵检测 \",\"防病毒 \",\"抗拒绝服务攻击 \",\"网络访问控制\"],\"title\":\"下列哪一个是防火墙设备的核心功能（）\",\"id\":\"54\"},{\"type\":\"singlechoose\",\"list\":[\"邮件\",\"文件交换 \",\"网页浏览 \",\"光盘 \"],\"title\":\"网页病毒主要通过以下途径传播（ ）\",\"id\":\"55\"},{\"type\":\"singlechoose\",\"list\":[\"网络钓鱼、隐私跟踪 \",\"网络钓鱼 、隐私跟踪 、数据劫持\",\"隐私跟踪、数据劫持、浏览器的安全漏洞 \",\"网络钓鱼、隐私跟踪、数据劫持、浏览器的安全漏洞 \"],\"title\":\"浏览器存在的安全风险主要包含（）\",\"id\":\"56\"},{\"type\":\"singlechoose\",\"list\":[\"看完的邮件就立即删除 \",\"定期删除邮箱的邮件 \",\"定期备份邮件并删除\",\"发送附件时压缩附件\"],\"title\":\"为了防止邮箱邮件爆满而无法正常使用邮箱，您认为应该怎么做（）\",\"id\":\"57\"},{\"type\":\"singlechoose\",\"list\":[\"不断优化垃圾邮件设置、查看邮件数字签名，确认发件人信息、定期更新防病毒软件\",\"不断优化垃圾邮件设置、查看邮件数字签名，确认发件人信息、定期更新防病毒软件、邮件传输加密 \",\"全部不是\",\"查看邮件数字签名，确认发件人信息、定期更新防病毒软件、邮件传输加密\"],\"title\":\"可以从哪些方面增强收邮件的安全性（）\",\"id\":\"58\"},{\"type\":\"singlechoose\",\"list\":[\"123456789\",\"666666\",\"abc123\",\"qw！bydp00dwz1. \"],\"title\":\"以下哪种口令不属于弱口令（）\",\"id\":\"59\"},{\"type\":\"singlechoose\",\"list\":[\"随身携带员工卡 \",\"不将员工卡借予其它人 \",\"身份证复印件使用后要销毁 \",\"购买指纹膜，特殊原因时由同事协助打卡 \"],\"title\":\"以下哪个说法是错误的（）\",\"id\":\"60\"},{\"type\":\"singlechoose\",\"list\":[\"安全设备的采买\",\"安全组织的建立 \",\"安全制度的建立 \",\"人员安全意识的提高 \"],\"title\":\"企业信息安全哪一方面更加重要（）\",\"id\":\"61\"}],[{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"VPN的主要特点是通过加密使信息能安全的通过Internet传递。（）\",\"id\":\"471\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"L2TP与PPTP相比,加密方式可以采用Ipsec加密机制以增强安全性。（）\",\"id\":\"472\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"计算机信息系统的安全威胁同时来自内、外两个方面。（）\",\"id\":\"473\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"用户的密码一般应设置为8位以上。（）\",\"id\":\"474\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"漏洞是指任何可以造成破坏系统或信息的弱点。（）\",\"id\":\"475\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"安全审计就是日志的记录。（）\",\"id\":\"476\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"计算机病毒是计算机系统中自动产生的。（）\",\"id\":\"477\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"对于一个计算机网络来说,依靠防火墙即可以达到对网络内部和外部的安全防护（）\",\"id\":\"478\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"IP承载网中,PE需要对CE发布的路由进行过滤。（）\",\"id\":\"479\"},{\"type\":\"singlechoose\",\"list\":[\"对\",\"错\"],\"title\":\"IP承载网中，PE设备和CE设备采用路由协议对接时，不需要配置认证信息。（）\",\"id\":\"480\"}],{}]" + ')');
+    });
+    var mySwiper = null;
+    var mainSwiper = null;
+    var answerList = [];
+    var answerSingl = {
+        qust_num: '',
+        qust_type: '',
+        qust_value: ''
+    }
 
-				console.log(all_question);
-				var content = '';
-				for (var k in all_question[lvl])
-				{
-					var ques = all_question[lvl][k];
-					content += '<div class="swiper-slide ';
-					if (k == 0)
-					{
-						content += 'swiper-slide-active"><div class="swiper-item" id="';
-					}
-					else
-					{
-						content += 'swiper-slide-next"><div class="swiper-item" id="';
-					}
-					content += ques.id;
-					content += '" data-option="';
-					content += ques.type;
-					content += ('"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="' + ques.id + '"><span>' + (parseInt(k) + 1) + '、</span>');
-					content += ques.title;
-					content += '</p></div>';
+    function show_result(score, code, exchange) {
+        $("#qtContainer").hide();
+        // $("#qtContainer").css("opacity", 0);
+        $(".section-four").show();
+        $("#userScores").text(score);
 
-					var tb = ["A、", "B、", "C、", "D、", "E、", "F、", "G、", "H、", "I、"];
-					for (var i in ques.list)
-					{
-						content += '<div class="qt-block"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + ques.id + '"><span>' +  tb[i] + '</span>' + ques.list[i] + '</p></div>';
-					}
-					content += '</div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>\n';
-				}
-				console.log(content);
-				$(".swiper-wrapper").html(content);
-			}
-            var curSect = eve.closest(".section");
-            // curSect.hide().next().show();
-            curSect.hide().next().addClass("active");
-            if (curSect.index() >= 1) {
-                $(".bottom").hide();
-                loadSwiper();
-            }
-            else {
-                heightAuto();
-            }
+    }
+    $(function() {
+        // 页面初始化
+        loadSwiper();
+        var tmp = location.search.match(/score=(\d+)/)
+        var tmp1 = location.search.match(/code=(\d+)/)
+        var exchange = location.search.match(/exchange=(\d+)/)
+
+        var tryagin = window.location.hash.match(/tryagin=true/);
+        // alert(window.location);
+
+        if (tryagin) {
+            $(".main-swiper-container .swiper-slide").hide();
+            $(".main-swiper-container .swiper-slide").eq(2).show();
         }
 
-        // 滑动插件动态加载（异步）
-        function loadSwiper() {
-            var oHead = document.getElementsByTagName('HEAD').item(0);
-            var oScript = document.createElement("script");
-            oScript.type = "text/javascript";
-            oScript.src = "js/Swiper/swiper.min.js";
-            oHead.appendChild(oScript);
-            setTimeout(function () {
-                mySwiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination',
-                    paginationClickable: true
-                });
-            }, 500);
+        // $(".main-swiper-container .swiper-slide").hide();
+        // $(".main-swiper-container .swiper-slide").eq(2).show();
+        if (tmp && tmp1) {
+            // alert(tmp[1] > 9 -glvl);
+            if (tmp[1] > 6) {
+                $(".main-swiper-container .swiper-slide").hide();
+                $(".main-swiper-container .swiper-slide").eq(2).show();
+                $(".section").hide();
+                $(".section").eq(2).show();
+
+                $(".xinanqt").hide();
+                $(".failblock").hide();
+                $(".no-exchange").show();
+
+                $(".page-item-bottom").hide();
+
+                // $(".exchanged").show();
+                $("#userScores").text(tmp[1]);
+                // $("#userScores").text("1234567");
+                $("#rewardCode").text(tmp1[1]);
+            } else {
+                $(".main-swiper-container .swiper-slide").hide();
+                $(".main-swiper-container .swiper-slide").eq(2).show();
+            }
+            // show_result(tmp[1], tmp1[1], exchange);
         }
 
+    });
 
-        //下一题，触发滑动事件
-        function nextQust(eve) {
-            var curObj = eve.closest(".swiper-slide");
-            var totalNum = $(".swiper-item").length;
-            var curPageId = curObj.index();
+    function chooseItem(eve) {
+        $(eve).find("input").prop("checked", true);
+        if ($(eve).find("input").hasClass("qt-checkbox")) {
+            $(eve).toggleClass("activecolor")
+        } else {
+            $(eve).addClass("activecolor");
+            $(eve).siblings(".qt-block").removeClass("activecolor");
+        }
+    }
+    var glvl = 0;
+
+    function nextPart(eve, lvl) {
+        if (lvl !== undefined) {
+            glvl = lvl;
+            var all_question = eval('(' + "[[{\"type\":1,\"list\":[\"操作系统配置\",\"公钥\",\"生产系统源代码\",\"针对生产系统的操作命令\"],\"title\":\"运维操作人员不应该访问以下哪项内容（）\",\"id\":\"34\"},{\"type\":1,\"list\":[\"不予理睬\",\"登入系统，让同事在我的电脑系统上进行查询\",\"让同事用自己的用户名登录系统进行查询，并不能离开\",\"报告信息安全员\"],\"title\":\"A 员工电脑出现了故障，不能使用，但需要马上进入某信息系统查询一些数据，故向B员工借用电脑，B员工应该（）\",\"id\":\"45\"},{\"type\":1,\"list\":[\"删除电脑中的信息\",\"多次将硬盘格式化\",\"对硬盘进行物理破坏\",\"与希望小学签订保密\"],\"title\":\"某公司需要捐献一批废旧电脑给希望小学，为了防止信息泄露，应采取的最合理的方法是（）\",\"id\":\"39\"},{\"type\":1,\"list\":[\"强化用户安全意识\",\"使用更复杂的口令\",\"使用一次性口令\",\"使用加密传输协议\"],\"title\":\"防范电子钓鱼的根本方法是（）\",\"id\":\"35\"},{\"type\":1,\"list\":[\"它足够安全，可以传输个人敏感数据\",\"担心是否会有陌生人登录到您的电脑\",\"不用花钱，尽情享用无线互联网，不会有人发觉无线网络的使用\",\"对在网上传输的数据进行加密保护，以防止敏感数据泄露或曝光\"],\"title\":\"当您连接到公司或外部无线网络时，您应该（）\",\"id\":\"29\"},{\"type\":1,\"list\":[\"自己动手解决问题\",\"不予关注\",\"尽量保护现场，维持现状，尽快将事件报告给本处室信息安全管理员\",\"报告上级领导\"],\"title\":\"发现信息安全事件后，发现人应（）\",\"id\":\"38\"},{\"type\":1,\"list\":[\"一个月或一个月以内\",\"1——3个月\",\"3——6个月\",\"半年以上或从不更换\"],\"title\":\"多久更换一次计算机的密码较为安全( )\",\"id\":\"8\"},{\"type\":1,\"list\":[\"操作方法不当造成的\",\"人为制造的\",\"频繁关机造成的\",\"操作人员不讲卫生造成的\"],\"title\":\"下列对计算机病毒产生原因的描述中，（ ）是正确的\",\"id\":\"33\"},{\"type\":1,\"list\":[\"选择资源丰富的网站下载\",\"关闭杀毒软件，提高下载速度\",\"下载完成后直接打开下载的文件\",\"下载软件时，最好到软件官方网站或者其他正规软件下载网站下载\"],\"title\":\"下载安全建议正确的选项是（）\",\"id\":\"20\"},{\"type\":1,\"list\":[\"接收带有广告、测试等性质的微博要有警惕之心，不要贪图小便宜随意点击来历不明的链接\",\"不发布虚假信息、不造谣、不传谣、不发表不当言论\",\"对微博进行相应安全配置：账号设置--隐私安全、账号安全\",\"可在任意公共电脑或者移动终端登录 \"],\"title\":\"微博安全防护建议错误的是（）\",\"id\":\"19\"}],[{\"type\":1,\"list\":[\"150.25.0.27\",\"150.25.30.23\",\"150.25.40.24\",\"150.25.224.30\"],\"title\":\"如果网络150.25.0.0的子网掩码是255.255.224.0 ，下面的哪一个是合法的主机地址（）\",\"id\":\"311\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"资产的属性是资产弱点的严重程度。（）\",\"id\":\"401\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"IPSEC的隧道模式提供PC到PC之间的安全。（）\",\"id\":\"348\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"OSPF协议使用的metric是cost（）\",\"id\":\"317\"},{\"type\":1,\"list\":[\"人为的配置错误\",\"网络设备操作系统漏洞\",\"拒绝服务攻击的目标\",\"以上全部. \"],\"title\":\"网络设备面临的威胁有（）\",\"id\":\"255\"},{\"type\":2,\"list\":[\"监控网络和系统\",\"实时报警\",\"主动响应\",\"审计跟踪\"],\"title\":\"入侵检测系统的作用（）\",\"id\":\"336\"},{\"type\":1,\"list\":[\"123456789\",\"666666\",\"abc123\",\"qw！bydp00dwz1. \"],\"title\":\"以下哪种口令不属于弱口令（）\",\"id\":\"59\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"复杂的密码容易忘记，可以将密码写下来粘贴到办公桌的隐蔽地方。（）\",\"id\":\"279\"},{\"type\":1,\"list\":[\"传输层\",\"应用层\",\"会话层\",\"传输层与应用层之间\"],\"title\":\"SSL工作在OSI\/RM的哪一层（）\",\"id\":\"156\"},{\"type\":1,\"list\":[\"多人共用同一帐号\",\"多人共用多个帐号\",\"一人对应单独帐号\",\"一人对应多个帐号\"],\"title\":\"设置设备的管理员帐号时，应（）\",\"id\":\"143\"}],[{\"type\":1,\"list\":[\"数据区\",\"对外服务区\",\"重要业务区\"],\"title\":\"在安全区域划分中DMZ 区通常用做（）\",\"id\":\"832\"},{\"type\":1,\"list\":[\"机密数据\",\"敏感数据\",\"私有数据\",\"公开数据\"],\"title\":\"以下各类型的数据中那个的保护级别是最低的（）\",\"id\":\"957\"},{\"type\":1,\"list\":[\"查询报文\",\"成员关系报告\",\"退出报告\",\"差错报告报文\"],\"title\":\"IGMP报文不包括\",\"id\":\"883\"},{\"type\":1,\"list\":[\"X.2\",\"ATM\",\"Ipsec\",\"NNTP\"],\"title\":\"虚拟专用网常用的安全协议为（）\",\"id\":\"839\"},{\"type\":1,\"list\":[\"信息资产的价值、面临的威胁以及自身存在的脆弱性等\",\"病毒、黑客、漏洞等\",\"保密信息如国家秘密、商业秘密等\",\"网络、系统、应用的复杂程度\"],\"title\":\"信息安全风险应该是以下哪些因素的函数？（）\",\"id\":\"752\"},{\"type\":1,\"list\":[\"IP \",\"TCP\",\"SNMP  \",\"SMTP\"],\"title\":\"用于电子邮件的协议是（）\",\"id\":\"866\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"IP承载网中,PE需要对CE发布的路由进行过滤。（）\",\"id\":\"479\"},{\"type\":1,\"list\":[\"缓存溢出攻击\",\"钓鱼攻击\",\"暗门攻击\",\"DDOS攻击\"],\"title\":\"用户收到了一封可疑的电子邮件,要求用户提供银行账户及密码,这是属于何种攻击手段？ （）\",\"id\":\"787\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"SMTP没有对邮件加密的功能是导致垃圾邮件泛滥的主要原因（）\",\"id\":\"613\"},{\"type\":0,\"list\":[\"对\",\"错\"],\"title\":\"用户的密码一般应设置为16位以上。（）\",\"id\":\"595\"}],{}]" + ')');
+
+            //console.log(lvl, all_question[lvl]);
+            var content = '';
+            for (var k in all_question[lvl]) {
+                var ques = all_question[lvl][k];
+                content += '<div class="swiper-slide ';
+                if (k == 0) {
+                    content += 'swiper-slide-active"><div class="swiper-item" id="';
+                } else {
+                    content += 'swiper-slide-next"><div class="swiper-item" id="';
+                }
+                content += ques.id;
+                content += '" data-option="';
+                content += (ques.type == 2 ? "multichoose" : "singlechoose");
+                content += ('"><div class="qt-block-title"><p class="qt color1 txtlt"><input class="qt-input" type="radio" name="' + ques.id + '"><span>' + (parseInt(k) + 1) + '、</span>');
+                content += ((ques.type == 0 ? "判断题-" : (ques.type == 1 ? "单选题-" : "多选题-")) + ques.title);
+                content += '</p></div>';
+
+                var tb = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+                for (var i in ques.list) {
+                    if (ques.type == 2) {
+                        content += '<div class="qt-block" onclick="chooseItem($(this));"><p class="qt txtlt"><input class="qt-input qt-checkbox" type="checkbox" name="' + ques.id + '"><span>' + tb[i] + '</span>' + ques.list[i] + '</p></div>';
+                    } else {
+                        content += '<div class="qt-block" onclick="chooseItem($(this));"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + ques.id + '"><span>' + tb[i] + '</span>' + ques.list[i] + '</p></div>';
+                    }
+                }
+                if (k == all_question[lvl].length - 1) {
+                    content += '</div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">提交</button></p></div>\n';
+                } else {
+                    content += '</div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>\n';
+                }
+            }
+            $(".qt-swiper-wrapper").html(content);
+        }
+        var curSect = eve.closest(".section");
+        // curSect.hide().next().show();
+        curSect.hide().next().addClass("active");
+        if (curSect.index() >= 1) {
+            $(".bottom").hide();
+        }
+        if (curSect.index() == 0) {
+            $(".xinanqt").hide();
+            $(".page-item-bottom").hide();
+            $("#qtContainer").css("opacity", 1);
+            window.location.href = window.location.href + "#tryagin=true";
+        } else {
+            heightAuto();
+        }
+        loadSwiper();
+        mySwiper = new Swiper('.qt-swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+
+    }
+
+    // 滑动插件动态加载（异步）
+    function loadSwiper() {
+        var oHead = document.getElementsByTagName('HEAD').item(0);
+        var oScript = document.createElement("script");
+        oScript.type = "text/javascript";
+        oScript.src = "js/Swiper/swiper.min.js";
+        oHead.appendChild(oScript);
+        setTimeout(function() {
+            // mySwiper = new Swiper('.qt-swiper-container', {
+            //     pagination: '.swiper-pagination',
+            //     paginationClickable: true
+            // });
+            mainSwiper = new Swiper('.main-swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true
+            });
+        }, 500);
+    }
+
+
+    //下一题，触发滑动事件
+    // function nextQust(eve) {
+    //     var curObj = eve.closest(".swiper-slide");
+    //     var totalNum = $(".swiper-item").length;
+    //     $("#" + totalNum).next("p").find(".default-btn").text("提交");
+    //     var curPageId = curObj.index();
+    //     answerSingle = {};
+    //     answerSingle.qust_num = curObj.find(".swiper-item").attr("id");
+    //     answerSingle.qust_type = curObj.find(".swiper-item").attr("data-option");
+    //     var inputs = curObj.find("input:checked");
+    //     answerSingle.qust_value = '';
+    //     for (var i = 0; i < inputs.length; i++) {
+    //         answerSingle.qust_value += String.fromCharCode(inputs.eq(i).next("span").text().charCodeAt(0) - 17);
+    //     }
+    //     answerList.push(answerSingle);
+    //     console.log('answerList is ', answerList);
+    //     mySwiper.slideTo(curPageId + 1, 300, false);
+
+    //     console.log(totalNum, curPageId);
+    //     if (curPageId == totalNum - 1) {
+    //         $.ajax({
+    //             url: 'http://quiz.cnmstl.net/api/question?action=calc&openid=' + openid + '&lvl=' + glvl,
+    //             type: 'post',
+    //             data: { "data": JSON.stringify(answerList) },
+    //             success: function (result) {
+    //                 result = JSON.parse(result);
+    //                 show_result(result.score, result.code, result.exchange);
+    //             },
+    //             error: function (result) {
+    //                 alert('错误：' + result.msg);
+    //             }
+    //         })
+    //     }
+    // }
+
+    function nextQust(eve) {
+        var curObj = eve.closest(".swiper-slide");
+        var totalNum = $(".swiper-item").length;
+        $("#" + totalNum).next("p").find(".default-btn").text("提交");
+        var curPageId = curObj.index();
+        mySwiper.slideTo(curPageId + 1, 300, false);
+
+        console.log(totalNum, curPageId);
+        if (curPageId == totalNum - 1) {
+            submitAnwsers();
+        }
+    }
+
+    // 提交保存答案
+    function submitAnwsers() {
+        var answerObj = $(".swiper-item");
+        var totalNum = answerObj.length;
+        for (var j = 0; j < totalNum; j++) {
             answerSingle = {};
-            answerSingle.qust_num = curObj.find(".swiper-item").attr("id");
-            answerSingle.qust_type = curObj.find(".swiper-item").attr("data-option");
-            var inputs = curObj.find("input:checked");
+            answerSingle.qust_num = answerObj.eq(j).attr("id");
+            answerSingle.qust_type = answerObj.eq(j).attr("data-option");
+            var inputs = answerObj.eq(j).find("input:checked");
             answerSingle.qust_value = '';
             for (var i = 0; i < inputs.length; i++) {
-                if (i == inputs.length - 1) {
-                    answerSingle.qust_value += inputs.eq(i).next("span").text();
-                } else {
-                    answerSingle.qust_value += inputs.eq(i).next("span").text() + '&';
-                }
+                answerSingle.qust_value += String.fromCharCode(inputs.eq(i).next("span").text().charCodeAt(0) - 17);
             }
             answerList.push(answerSingle);
-            console.log('answerList is ', answerList);
-            mySwiper.slideTo(curPageId + 1, 300, false);
+        }
+        console.log('answerList is ', answerList);
 
-            console.log(totalNum, curPageId);
-            if (curPageId == totalNum - 1) {
-                $.ajax({
-                    url: '',
-                    type: 'post',
-                    data: JSON.stringify(answerList),
-                    success: function (result) {
-                        if (curData.err == 0) {
-                            console.log('正确', result.msg);
-                            $("#qtContainer").hide();
-                            $(".section-four").show();
-                            $("#userScores").text(result.value);
-                            // if(score<90){
-                            // 	$(".successblock").hide();
-                            // 	$(".failblock").show();
-                            // }else{
-                            // 	$(".successblock").show();
-                            // 	$(".failblock").hide();
-                            // }
+        $.ajax({
+            url: 'http://quiz.cnmstl.net/api/question?action=calc&openid=' + openid + '&lvl=' + glvl,
+            type: 'post',
+            data: {
+                "data": JSON.stringify(answerList)
+            },
+            success: function(result) {
+                result = JSON.parse(result);
+                show_result(result.score, result.code, result.exchange);
+            },
+            error: function(result) {
+                alert('错误：' + result.msg);
+            }
+        })
+    }
 
-                        } else {
-                            alert('错误：' + result.msg);
-                        }
-                    },
-                    error: function (result) {
-                        alert('错误：' + result.msg);
-                    }
-                })
+    // 再试一次
+    function tryAgin(event) {
+        // var url=window.location+'#tryagin=true';
+        var url = window.location;
+        alert(url);
+        window.location = window.location;
+    }
+
+    // function GetRequest() {
+    //     var url = location.search; //获取url中"?"符后的字串 
+    //     var theRequest = new Object();
+    //     if (url.indexOf("?") != -1) {
+    //         var str = url.substr(1);
+    //         strs = str.split("&");
+    //         for (var i = 0; i < strs.length; i++) {
+    //             theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+    //         }
+    //     }
+    //     return theRequest;
+    // }
+    // var Request = new Object();
+    // Request = GetRequest();
+
+    function checkAnswer(curvalue) {
+        for (var i = 0; i < answerList.length - 1; i++) {
+            if (answerList[i].qust_num == curvalue.qust_num) {
+                answerList.splice(i, 1, curvalue);
             }
         }
+    }
 
-        function checkAnswer(curvalue) {
-            for (var i = 0; i < answerList.length - 1; i++) {
-                if (answerList[i].qust_num == curvalue.qust_num) {
-                    answerList.splice(i, 1, curvalue);
-                }
-            }
+    // 高度自适应不同不同屏幕
+    function heightAuto() {
+        var BtmHeight = Math.abs(document.body.clientHeight - $(".container").height());
+        // alert(BtmHeight);
+        if (BtmHeight < 55) {
+            // $(".container").height($(".top").height()+$(".content").height()+55)
+            $(".bottom").removeClass("active-height")
+            $(".bottom").css('margin-top', BtmHeight);
+        } else {
+            $(".bottom").css('margin-top', 0);
+            $(".bottom").addClass("active-height")
         }
-
-        // 高度自适应不同不同屏幕
-        function heightAuto() {
-            var BtmHeight = Math.abs(document.body.clientHeight - $(".container").height());
-            // alert(BtmHeight);
-            if (BtmHeight < 55) {
-                // $(".container").height($(".top").height()+$(".content").height()+55)
-                $(".bottom").removeClass("active-height")
-                $(".bottom").css('margin-top', BtmHeight);
-            } else {
-                $(".bottom").css('margin-top', 0);
-                $(".bottom").addClass("active-height")
-            }
-        }
-        heightAuto();
+    }
+    heightAuto();
     </script>
+    <div id="cntvlive2-is-installed"></div>
+</body>
 
-<div id="cntvlive2-is-installed"></div></body></html>
+</html>

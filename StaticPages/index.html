@@ -1,4 +1,5 @@
 ﻿<html>
+
 <head>
     <title>信安</title>
     <meta charset="utf-8">
@@ -9,117 +10,117 @@
     <script src="js/jquery.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="js/Swiper/swiper.min.js"></script>
-
     <style id="style-1-cropbar-clipper">
-        /* Copyright 2014 Evernote Corporation. All rights reserved. */
-        .en-markup-crop-options {
-            top: 18px !important;
-            left: 50% !important;
-            margin-left: -100px !important;
-            width: 200px !important;
-            border: 2px rgba(255, 255, 255, .38) solid !important;
-            border-radius: 4px !important;
-        }
-
-        .en-markup-crop-options div div:first-of-type {
-            margin-left: 0px !important;
-        }
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+    
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+    
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
     </style>
 </head>
+
 <body>
-<div class="swiper-container swiper-container-horizontal main-swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide-active">
-            <div class="page-item pageone"></div>
-        </div>
-        <div class="swiper-slide swiper-slide-next">
-            <div class="page-item pagetwo">
-                <div class="page-item-content">
-                    <ul class="rules-menu">
-                        <li class="rules-menu-item">
-                            <h2 class="rule-title cr1">活动规则</h2>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+    <div class="swiper-container swiper-container-horizontal main-swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+                <div class="page-item pageone"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-next">
+                <div class="page-item pagetwo">
+                    <div class="page-item-content">
+                        <ul class="rules-menu">
+                            <li class="rules-menu-item">
+                                <h2 class="rule-title cr1">活动规则</h2>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     通过扫描“信安在线服务”二维码进入公众号中，
                                     点击“有奖答题”模块，进行在线答题；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">题目难度分为“入门”、“基础”、“专业”；</span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">题目难度分为“入门”、“基础”、“专业”；</span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     “入门”题目达到9分及以上分数时，获得兑奖码，
                                     凭兑奖码进行兑奖；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     “基础”题目达到8分及以上分数时，获得兑奖码，
                                     凭兑奖码进行兑奖；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     “专业”题目达到7分及以上分数时，获得兑奖码，
                                     凭兑奖码进行兑奖；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item cr1">
-                            <span class="square"></span>
-                            <span class="item-span">一个微信账号只可兑奖一次，但答题难度和次数不限；</span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+                            </li>
+                            <li class="rules-menu-item cr1">
+                                <span class="square"></span>
+                                <span class="item-span">一个微信账号只可兑奖一次，但答题难度和次数不限；</span>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     无论何种题目，只要获得兑奖分数，即可在公账号首
                                     页的“兑奖码”模块中显示兑奖页面；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">
                                     兑奖者将该活动转发朋友圈后，根据获得的“兑奖码”
                                     找现场工作人员进行奖品兑换，一码一奖，兑过无效；
                                 </span>
-                        </li>
-                        <li class="rules-menu-item">
-                            <span class="square"></span>
-                            <span class="item-span">活动最终解释权归属于信安在线。</span>
-                        </li>
-                    </ul>
-                    <div class="page-item-bottom" style="position: inherit;left:0;right: 0;bottom:0;">
-                        <p class="logo-area txtct">
-                            <img src="image/logo02.png">
-                        </p>
-                        <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
-                        <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:00</p>
+                            </li>
+                            <li class="rules-menu-item">
+                                <span class="square"></span>
+                                <span class="item-span">活动最终解释权归属于信安在线。</span>
+                            </li>
+                        </ul>
+                        <div class="page-item-bottom" style="position: inherit;left:0;right: 0;bottom:0;">
+                            <p class="logo-area txtct">
+                                <img src="image/logo02.png">
+                            </p>
+                            <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
+                            <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:00</p>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="page-item pagethree">
-                <div class="page-item-content">
-                    <div class="container">
-                        <div class="top">
-                            <p class="top-logo txtct">
-                                <img src="image/logo01.png">
-                            </p>
-                            <!-- <h2 class="title txtlt">信安在线资讯——有奖大问答</h2> -->
-                            <p class="xinanqt txtct">
-                                <img src="image/xinanqt.png">
-                            </p>
-                        </div>
-                        <div class="content">
-                            <!--  <div class="section section-one">
+            <div class="swiper-slide">
+                <div class="page-item pagethree">
+                    <div class="page-item-content">
+                        <div class="container">
+                            <div class="top">
+                                <p class="top-logo txtct">
+                                    <img src="image/logo01.png">
+                                </p>
+                                <!-- <h2 class="title txtlt">信安在线资讯——有奖大问答</h2> -->
+                                <p class="xinanqt txtct">
+                                    <img src="image/xinanqt.png">
+                                </p>
+                            </div>
+                            <div class="content">
+                                <!--  <div class="section section-one">
                                  <div class="tips">
                                      <p>
                                          社会生活对网络的依赖程度越来越高，网络安全对现实社会的影响也日益凸显。为提高大众对信息安全的保密意识和网络安全应用技能，信安在线推出“增强网络安全意识普及网络安全知识”网上安全知识竞答活动。通过该活动向全社会宣传网络安全理念，使网络安全文化覆盖到网络的每一个角落。期待您的参与，精美大奖等你来拿！
@@ -130,261 +131,244 @@
                                      <button class="default-btn txtct" type="button" id="beginAnw" onclick="nextPart($(this))">开始答题</button>
                                  </p>
                              </div> -->
-                            <div class="section section-two" style="display: block;">
-                                <div class="section-two-item">
-                                    <p class="default-p txtct">
-                                        <button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
-                                            入
-                                            <span>门</span>
-                                    <p></p>
-                                    </button>
-
-                                    </p>
-                                    <p class="item-tips txtct">（普通大众可以掌握和理解的知识）</p>
+                                <div class="section section-two" style="display: block;">
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 0)">
+                                                入
+                                                <span>门</span>
+                                                <p></p>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（普通大众可以掌握和理解的知识）</p>
+                                    </div>
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 1)">
+                                                基
+                                                <span>础</span>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（IT行业从业人员应了解的知识）</p>
+                                    </div>
+                                    <div class="section-two-item">
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="nextPart($(this), 2)">
+                                                专
+                                                <span>业</span>
+                                            </button>
+                                        </p>
+                                        <p class="item-tips txtct">（安全行业专业人员掌握的知识）</p>
+                                    </div>
                                 </div>
-                                <div class="section-two-item">
-                                    <p class="default-p txtct">
-                                        <button class="default-btn txtct" type="button" onclick="nextPart($(this), 1)">
-                                            基
-                                            <span>础</span>
-                                        </button>
-                                    </p>
-                                    <p class="item-tips txtct">（IT行业从业人员应了解的知识）</p>
-                                </div>
-                                <div class="section-two-item">
-                                    <p class="default-p txtct">
-                                        <button class="default-btn txtct" type="button" onclick="nextPart($(this), 2)">
-                                            专
-                                            <span>业</span>
-                                        </button>
-                                    </p>
-                                    <p class="item-tips txtct">（安全行业专业人员掌握的知识）</p>
-                                </div>
-                            </div>
-                            <div class="section section-three" id="qtContainer">
-                                <div class="swiper-container swiper-container-horizontal qt-swiper-container">
-                                    <div class="swiper-wrapper qt-swiper-wrapper">
-                                        <div class="swiper-slide swiper-slide-active">
-                                            <div class="swiper-item" id="num1" data-option="singlechoose">
-                                                <div class="qt-block-title">
-                                                    <p class="qt color1 txtlt">
-                                                        <input class="qt-input" type="radio" name="num1">
-                                                        <span>1、</span>
-                                                        “肉鸡”的正确解释？
-                                                    </p>
+                                <div class="section section-three" id="qtContainer">
+                                    <div class="swiper-container swiper-container-horizontal qt-swiper-container">
+                                        <div class="swiper-wrapper qt-swiper-wrapper">
+                                            <div class="swiper-slide swiper-slide-active">
+                                                <div class="swiper-item" id="num1" data-option="singlechoose">
+                                                    <div class="qt-block-title">
+                                                        <p class="qt color1 txtlt">
+                                                            <input class="qt-input" type="radio" name="num1">
+                                                            <span>1、</span> “肉鸡”的正确解释？
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num1">
+                                                            <span>A</span> 比较慢的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num1">
+                                                            <span>B</span> 被黑客控制的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num1">
+                                                            <span>C</span> 肉食鸡
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num1">
+                                                            <span>D</span> 烤鸡
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num1">
-                                                        <span>A</span>
-                                                        比较慢的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num1">
-                                                        <span>B</span>
-                                                        被黑客控制的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num1">
-                                                        <span>C</span>
-                                                        肉食鸡
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num1">
-                                                        <span>D</span>
-                                                        烤鸡
-                                                    </p>
-                                                </div>
+                                                <p class="default-p next-qt txtrt">
+                                                    <button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题
+                                                    </button>
+                                                </p>
                                             </div>
-                                            <p class="default-p next-qt txtrt">
-                                                <button class="default-btn txtct" type="button"
-                                                        onclick="nextQust($(this))">下一题
-                                                </button>
-                                            </p>
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-next">
-                                            <div class="swiper-item" id="num2" data-option="multichoose">
-                                                <div class="qt-block">
-                                                    <p class="qt color1 txtlt">
-                                                        <span>2、</span>
-                                                        “肉鸡”的正确解释？
-                                                    </p>
+                                            <div class="swiper-slide swiper-slide-next">
+                                                <div class="swiper-item" id="num2" data-option="multichoose">
+                                                    <div class="qt-block">
+                                                        <p class="qt color1 txtlt">
+                                                            <span>2、</span> “肉鸡”的正确解释？
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num2">
+                                                            <span>A</span> 比较慢的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num2">
+                                                            <span>B</span> 被黑客控制的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num2">
+                                                            <span>C</span> 肉食鸡
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num2">
+                                                            <span>D</span> 烤鸡
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num2">
-                                                        <span>A</span>
-                                                        比较慢的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num2">
-                                                        <span>B</span>
-                                                        被黑客控制的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num2">
-                                                        <span>C</span>
-                                                        肉食鸡
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num2">
-                                                        <span>D</span>
-                                                        烤鸡
-                                                    </p>
-                                                </div>
+                                                <p class="default-p next-qt txtrt">
+                                                    <button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题
+                                                    </button>
+                                                </p>
                                             </div>
-                                            <p class="default-p next-qt txtrt">
-                                                <button class="default-btn txtct" type="button"
-                                                        onclick="nextQust($(this))">下一题
-                                                </button>
-                                            </p>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-item" id="num3" data-option="singlechoose">
-                                                <div class="qt-block-title">
-                                                    <p class="qt color1 txtlt">
-                                                        <span>3、</span>
-                                                        “肉鸡”的正确解释？
-                                                    </p>
+                                            <div class="swiper-slide">
+                                                <div class="swiper-item" id="num3" data-option="singlechoose">
+                                                    <div class="qt-block-title">
+                                                        <p class="qt color1 txtlt">
+                                                            <span>3、</span> “肉鸡”的正确解释？
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num3">
+                                                            <span>A</span> 比较慢的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num3">
+                                                            <span>B</span> 被黑客控制的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num3">
+                                                            <span>C</span> 肉食鸡
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input" type="radio" name="num3">
+                                                            <span>D</span> 烤鸡
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num3">
-                                                        <span>A</span>
-                                                        比较慢的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num3">
-                                                        <span>B</span>
-                                                        被黑客控制的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num3">
-                                                        <span>C</span>
-                                                        肉食鸡
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input" type="radio" name="num3">
-                                                        <span>D</span>
-                                                        烤鸡
-                                                    </p>
-                                                </div>
+                                                <p class="default-p next-qt txtrt">
+                                                    <button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题
+                                                    </button>
+                                                </p>
                                             </div>
-                                            <p class="default-p next-qt txtrt">
-                                                <button class="default-btn txtct" type="button"
-                                                        onclick="nextQust($(this))">下一题
-                                                </button>
-                                            </p>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-item" id="num4" data-option="multichoose">
-                                                <div class="qt-block">
-                                                    <p class="qt color1 txtlt">
-                                                        <span>4、</span>
-                                                        “肉鸡”的正确解释？
-                                                    </p>
+                                            <div class="swiper-slide">
+                                                <div class="swiper-item" id="num4" data-option="multichoose">
+                                                    <div class="qt-block">
+                                                        <p class="qt color1 txtlt">
+                                                            <span>4、</span> “肉鸡”的正确解释？
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num4">
+                                                            <span>A</span> 比较慢的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num4">
+                                                            <span>B</span> 被黑客控制的电脑
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num4">
+                                                            <span>C</span> 肉食鸡
+                                                        </p>
+                                                    </div>
+                                                    <div class="qt-block">
+                                                        <p class="qt txtlt">
+                                                            <input class="qt-input qt-checkbox" type="checkbox" name="num4">
+                                                            <span>D</span> 烤鸡
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num4">
-                                                        <span>A</span>
-                                                        比较慢的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num4">
-                                                        <span>B</span>
-                                                        被黑客控制的电脑
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num4">
-                                                        <span>C</span>
-                                                        肉食鸡
-                                                    </p>
-                                                </div>
-                                                <div class="qt-block">
-                                                    <p class="qt txtlt">
-                                                        <input class="qt-input qt-checkbox" type="checkbox" name="num4">
-                                                        <span>D</span>
-                                                        烤鸡
-                                                    </p>
-                                                </div>
+                                                <p class="default-p next-qt txtrt">
+                                                    <button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题
+                                                    </button>
+                                                </p>
                                             </div>
-                                            <p class="default-p next-qt txtrt">
-                                                <button class="default-btn txtct" type="button"
-                                                        onclick="nextQust($(this))">下一题
-                                                </button>
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="section section-four">
-                                <div class="successblock">
-                                    <p class="no-exchange  result txtct">恭喜您！</p>
-                                    <p class="no-exchange  result score txtct">
-                                        获得
-                                        <span id="userScores"></span>
-                                        分&nbsp;&nbsp;&nbsp;
-                                    </p>
-                                    <p class="exchanged result txtct">恭喜您本次</p>
-                                    <p class="exchanged result result-score txtct">答题获得<span id="lastScore"></span>分</p>
-                                    <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p>
-
-                                    <p class="no-exchange contact txtct cr1" id="rewardCode2">
-                                        奖品兑换码：
-                                        <span class="rewardcode-span" id="rewardCode"></span>
-                                    </p>
-                                    <p class="no-exchange result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
+                                <div class="section section-four">
+                                    <div class="successblock">
+                                        <!-- 未兑换 -->
+                                        <p class="no-exchange  result txtct">恭喜您！</p>
+                                        <p class="no-exchange  result score txtct">
+                                            获得
+                                            <span id="userScores"></span> 分&nbsp;&nbsp;&nbsp;
+                                        </p>
+                                        <p class="no-exchange default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                        <p class="no-exchange contact txtct cr1" id="rewardCode2">
+                                            奖品兑换码：
+                                            <span class="rewardcode-span" id="rewardCode"></span>
+                                        </p>
+                                        <p class="no-exchange result scoretips txtct">请凭借以上兑换码兑换奖品！</p>
+                                        <!-- 已兑换 -->
+                                        <p class="exchanged result txtct">恭喜您本次</p>
+                                        <p class="exchanged result result-score txtct">答题获得<span id="lastScore"></span>分</p>
+                                        <p class="exchanged result-qt result txtct" id="continueQt">欢迎继续参与答题</p>
+                                        <p class="exchanged  default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                    </div>
+                                    <div class="failblock">
+                                        <p class="result score txtct">
+                                            获得
+                                            <span id="userFailScores"></span> 分&nbsp;&nbsp;&nbsp;
+                                        </p>
+                                        <p class="result fail-title txtct">&nbsp;很遗憾！</p>
+                                        <p class="result fail-infor txtct">您未能获得奖品</p>
+                                        <p class="fail-encour txtct cr1">请您再接再厉</p>
+                                        <p class="default-p txtct">
+                                            <button class="default-btn txtct" type="button" onclick="tryAgin()">再来一次</button>
+                                        </p>
+                                    </div>
+                                    <div class="bottom-color" style="bottom:-100%;height:68%;"></div>
                                 </div>
-                                <div class="failblock">
-                                    <p class="result score txtct">
-                                        获得
-                                        <span id="userFailScores"></span>
-                                        分&nbsp;&nbsp;&nbsp;
-                                    </p>
-                                    <p class="result fail-title txtct">&nbsp;很遗憾！</p>
-                                    <p class="result fail-infor txtct">您未能获得奖品</p>
-                                    <p class="fail-encour txtct cr1">请您再接再厉</p>
-                                </div>
-                                <div class="bottom-color" style="bottom:-100%;height:68%;"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="page-item-bottom">
-                        <p class="logo-area txtct">
-                            <img src="image/logo02.png">
-                        </p>
-                        <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
-                        <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:00</p>
+                        <div class="page-item-bottom">
+                            <p class="logo-area txtct">
+                                <img src="image/logo02.png">
+                            </p>
+                            <p class="location-area txtct">武汉国际博览中心 A6-1 馆 D30展台</p>
+                            <p class="date-area txtct">2016年9月19日 9:00 -- 2016年9月25日 15:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script type="text/javascript">
+    <script type="text/javascript">
     var openid = '1111111111';
     wx.config({
         debug: false,
@@ -398,15 +382,13 @@
     });
     var nb = ["牛逼大了", "完败", "漂亮", "偶像", "就是这么牛逼", "不服来战", "come on", "想怎样"];
     var dex = Math.floor(Math.random() * nb.length);
-    wx.ready(function () {
+    wx.ready(function() {
         wx.onMenuShareTimeline({
             title: '击败了全国' + (Math.random() * 5 + 95).toFixed(1) + '%的人,' + nb[dex] + '!',
             link: 'http://quiz.cnmstl.net/api/wxlogin',
             imgUrl: 'http://quiz.cnmstl.net/image/logo.png',
-            success: function () {
-            },
-            cancel: function () {
-            }
+            success: function() {},
+            cancel: function() {}
         });
     });
     var mySwiper = null;
@@ -417,7 +399,9 @@
         qust_type: '',
         qust_value: ''
     }
+
     function show_result(score, code, exchange) {
+        // $("#qtContainer").css("opacity", 0);
         $("#qtContainer").hide();
         $(".section-four").show();
         $("#userScores").text(score);
@@ -426,8 +410,7 @@
             $(".bottom-color").hide();
             $(".failblock").show();
             $("#userFailScores").text(score);
-        }
-        else {
+        } else {
             $(".successblock").show();
             $(".bottom-color").show();
             $(".failblock").hide();
@@ -443,11 +426,17 @@
             }
         }
     }
-    $(function () {
+    $(function() {
         // 页面初始化
         var tmp = location.search.match(/score=(\d+)/);
         var tmp1 = location.search.match(/codex=(\d+)/);
         var exchange = location.search.match(/exchange=(\d+)/);
+        var tryagin = location.search.match(/tryagin=true/);
+        // alert(window.location.href);
+        if (tryagin) {
+            $(".main-swiper-container .swiper-slide").hide();
+            $(".main-swiper-container .swiper-slide").eq(2).show();
+        }
         if (tmp && tmp1) {
             // alert(tmp[1] > 9 -glvl);
             if (tmp[1] > 6) {
@@ -466,6 +455,8 @@
                 $("#userScores").text(tmp[1]);
                 // $("#userScores").text("1234567");
                 $("#rewardCode").text(tmp1[1]);
+                $(".no-exchange.default-p ").hide();
+
             } else {
                 $(".main-swiper-container .swiper-slide").hide();
                 $(".main-swiper-container .swiper-slide").eq(2).show();
@@ -475,6 +466,7 @@
         loadSwiper();
 
     });
+
     function chooseItem(eve) {
         $(eve).find("input").prop("checked", true);
         if ($(eve).find("input").hasClass("qt-checkbox")) {
@@ -485,8 +477,8 @@
         }
     }
     var glvl = 0;
+
     function nextPart(eve, lvl) {
-        loadSwiper();
         if (lvl !== undefined) {
             glvl = lvl;
             var all_question = [];
@@ -498,8 +490,7 @@
                 content += '<div class="swiper-slide ';
                 if (k == 0) {
                     content += 'swiper-slide-active"><div class="swiper-item" id="';
-                }
-                else {
+                } else {
                     content += 'swiper-slide-next"><div class="swiper-item" id="';
                 }
                 content += ques.id;
@@ -513,27 +504,20 @@
                 for (var i in ques.list) {
                     if (ques.type == 2) {
                         content += '<div class="qt-block" onclick="chooseItem($(this));"><p class="qt txtlt"><input class="qt-input qt-checkbox" type="checkbox" name="' + ques.id + '"><span>' + tb[i] + '</span>' + ques.list[i] + '</p></div>';
-                    }
-                    else {
+                    } else {
                         content += '<div class="qt-block" onclick="chooseItem($(this));"><p class="qt txtlt"><input class="qt-input" type="radio" name="' + ques.id + '"><span>' + tb[i] + '</span>' + ques.list[i] + '</p></div>';
                     }
                 }
                 if (k == all_question[lvl].length - 1) {
                     content += '</div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">提交</button></p></div>\n';
-                }
-                else {
+                } else {
                     content += '</div><p class="default-p next-qt txtrt"><button class="default-btn txtct" type="button" onclick="nextQust($(this))">下一题</button></p></div>\n';
                 }
             }
             $(".qt-swiper-wrapper").html(content);
         }
         var curSect = eve.closest(".section");
-        // curSect.hide().next().show();
         curSect.hide().next().addClass("active");
-        // if (curSect.index() >= 1) {
-        //     $(".bottom").hide();
-        //     loadSwiper();
-        // }
         if (curSect.index() == 0) {
             $(".xinanqt").hide();
             $(".page-item-bottom").hide();
@@ -541,6 +525,11 @@
         } else {
             heightAuto();
         }
+        loadSwiper();
+        mySwiper = new Swiper('.qt-swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
     }
 
     // 滑动插件动态加载（异步）
@@ -550,11 +539,7 @@
         oScript.type = "text/javascript";
         oScript.src = "js/Swiper/swiper.min.js";
         oHead.appendChild(oScript);
-        setTimeout(function () {
-            mySwiper = new Swiper('.qt-swiper-container', {
-                pagination: '.swiper-pagination',
-                paginationClickable: true
-            });
+        setTimeout(function() {
             mainSwiper = new Swiper('.main-swiper-container', {
                 pagination: '.swiper-pagination',
                 paginationClickable: true
@@ -631,15 +616,41 @@
         $.ajax({
             url: 'http://quiz.cnmstl.net/api/question?action=calc&openid=' + openid + '&lvl=' + glvl,
             type: 'post',
-            data: {"data": JSON.stringify(answerList)},
-            success: function (result) {
+            data: {
+                "data": JSON.stringify(answerList)
+            },
+            success: function(result) {
                 result = JSON.parse(result);
                 show_result(result.score, result.code, result.exchange);
             },
-            error: function (result) {
+            error: function(result) {
                 alert('错误：' + result.msg);
             }
         })
+    }
+
+    // 再试一次
+    function tryAgin() {
+        var url = changeURLPar(window.location.href, 'tryagin','true');
+        // alert(url);
+        window.location.href = url+'';
+    }
+
+    function changeURLPar(destiny, par, par_value) {
+        var pattern = par + '=([^&]*)';
+        var replaceText = par + '=' + par_value;
+        if (destiny.match(pattern)) {
+            var tmp = '/\\' + par + '=[^&]*/';
+            tmp = destiny.replace(eval(tmp), replaceText);
+            return (tmp);
+        } else {
+            if (destiny.match('[\?]')) {
+                return destiny + '&' + replaceText;
+            } else {
+                return destiny + '?' + replaceText;
+            }
+        }
+        return destiny + '\n' + par + '\n' + par_value;
     }
 
     function checkAnswer(curvalue) {
@@ -664,8 +675,8 @@
         }
     }
     heightAuto();
-</script>
-
-<div id="cntvlive2-is-installed"></div>
+    </script>
+    <div id="cntvlive2-is-installed"></div>
 </body>
+
 </html>
